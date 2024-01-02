@@ -1,27 +1,27 @@
 class MusicModel{
   String? song,Album;
-  DateModel? dateModel;
+  DataModel? dataModel;
 
-  List<String> singer=[];
+  List<String> singer=['singer'];
 
-  MusicModel({this.song, this.Album, this.dateModel});
+  MusicModel({this.song, this.Album, this.dataModel});
 
   factory MusicModel.mapToModele(m1){
     return MusicModel(
       song: m1['song'],
       Album: m1['Album'],
-      dateModel: DateModel.mapToModel(m1['data'])
+      dataModel: DataModel.mapToModel(m1['data'])
     );
   }
 
 }
-class DateModel{
+class DataModel{
   String? image,url;
 
-  DateModel({this.image, this.url});
+  DataModel({this.image, this.url});
 
-  factory DateModel.mapToModel(m1){
-    return DateModel(
+  factory DataModel.mapToModel(m1){
+    return DataModel(
       image: m1['image'],
       url: m1['url'],
     );

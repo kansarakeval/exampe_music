@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class MusicProvider with ChangeNotifier {
   List<MusicModel> musicl2 = [];
 
-  Future<void> getUserData() async {
+  Future<void> getmusicData() async {
     JsonHelper jsonHelper = JsonHelper();
     List<MusicModel> musicl1 = await jsonHelper.musicToList();
     musicl2 = musicl1;

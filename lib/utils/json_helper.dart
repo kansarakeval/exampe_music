@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 
 class JsonHelper{
   Future<List<MusicModel>> musicToList() async {
-    var photosString = await rootBundle.loadString("assets/json/photos.json");
+    var musicString = await rootBundle.loadString("assets/json/music.json");
 
-    List music = jsonDecode(photosString);
+    List music = jsonDecode(musicString);
 
     List<MusicModel> musicModelList =
     music.map((e) => MusicModel.mapToModele(e)).toList();
